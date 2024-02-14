@@ -22,11 +22,11 @@ const Trending = ({genres}) => {
         fetchData()        
     }, [trendingType])
     return  (
-        <div className="p-4 mt-2 flex flex-col">
-            <Typography variant="h4">Trending</Typography>
+        <div className="p-4 flex flex-col bg-gray-900">
+            <Typography variant="h4" color="white">Trending</Typography>
             <div className="flex flex-row space-x-4">
-                <button onClick={() => hanldeTrending("day")}>Day</button>
-                <button onClick={() => hanldeTrending("week")}>Week</button>
+                <button onClick={() => hanldeTrending("day")}><Typography variant="lead" color="white">Day</Typography></button>
+                <button onClick={() => hanldeTrending("week")}><Typography variant="lead" color="white">Week</Typography></button>
             </div>
             <div className="mt-2 flex flex-row space-x-4 overflow-x-auto">
                 {movies?.map((movie, index) => {
