@@ -31,7 +31,7 @@ const Trending = ({genres}) => {
             <div className="mt-2 flex flex-row space-x-4 overflow-x-auto">
                 {movies?.map((movie, index) => {
                     return (
-                        <MoviePoster movieData={movie} index={index} key={index} />
+                        <MoviePoster movieData={movie} index={index} key={index} textColor={"white"} />
                     )
                 })}
 

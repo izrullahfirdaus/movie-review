@@ -37,3 +37,12 @@ export const convertToPercent = (value) => {
   const newValue = value * 10;
   return Math.round(newValue);
 };
+
+// export const getImageTrailerLink = (site, id) => {
+//   const site = [
+//     {
+//       siteName: "Youtube",
+//       imgUrl: "https://img.youtube.com/vi/uJMCNJP2ipI/0.jpg",
+//     },
+//   ];
+// };

@@ -4,6 +4,8 @@ import { getGenresMovie, getNowPlayingMovies } from "@/lib/loadFromAPI";
 import { useEffect, useState } from "react";
 import NowPlaying from "./home/NowPlaying";
 import Trending from "./home/Trending";
+import Trailers from "./home/Trailers";
+import PopularMovies from "./home/PopularMovies";
 
 export default function Home() {
   // const [favoriteMovies, setFavoriteMovies] = useState(null);
@@ -27,6 +29,8 @@ export default function Home() {
       <Navbar />
       <NowPlaying movieGenres={movieGenres} />
       <Trending genres={movieGenres} />
+      <Trailers />
+      <PopularMovies />
       <main>
         Hello to MovieReview
         <div>

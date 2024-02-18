@@ -8,6 +8,11 @@
     width: 250px;
 }
 
+.trailers-thumbnail {
+    height: 200px;
+    width: 350px;
+}
+
 .small-movie-poster {
     height: 210px;
     width: 135px;

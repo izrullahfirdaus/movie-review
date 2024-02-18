@@ -71,3 +71,53 @@ export const getTrendingMovies = async (trending) => {
     throw new Error("Error fetching favorite movies: " + error.message);
   }
 };
+
+export const getComingSoonMovie = async () => {
+  try {
+    const response = await fetch(
+      `${url}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&primary_release_date.gte=2024-03-01&region=usa&sort_by=popularity.desc&with_watch_monetization_types=flaterate}`,
+      options
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch favorite movies");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error("Error fetching favorite movies: " + error.message);
+  }
+};
+
+export const getPopularMovie = async (type) => {
+  try {
+    const rand = Math.floor(Math.random() * 10) + 1;
+    console.log("tipenya", type);
+    const response = await fetch(
+      `${url}/discover/movie?include_adult=false&include_video=false&language=en-US&page=${rand}&region=usa&sort_by=popularity.desc&with_watch_monetization_types=${type}`,
+      options
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch favorite movies");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error("Failed to fetch favorite movies");
+  }
+};
+
+export const getMovieVideo = async (id) => {
+  try {
+    const response = await fetch(
+      `${url}/movie/${id}/videos?language=en-US'`,
+      options
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch favorite movies");
+    }
+    const data = await response.json();
+    return data.results[0];
+  } catch (error) {
+    throw new Error("Failed to fetch favorite movies: ", error);
+  }
+};
