@@ -6,6 +6,7 @@ import NowPlaying from "./home/NowPlaying";
 import Trending from "./home/Trending";
 import Trailers from "./home/Trailers";
 import PopularMovies from "./home/PopularMovies";
+import ComingSoon from "./home/ComingSoon";
 
 export default function Home() {
   // const [favoriteMovies, setFavoriteMovies] = useState(null);
@@ -31,6 +32,7 @@ export default function Home() {
       <Trending genres={movieGenres} />
       <Trailers />
       <PopularMovies />
+      <ComingSoon />
       <main>
         Hello to MovieReview
         <div>

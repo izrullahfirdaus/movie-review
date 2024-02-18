@@ -46,3 +46,7 @@ export const convertToPercent = (value) => {
 //     },
 //   ];
 // };
+
+export const handleSelectedButton = (value, setValue) => {
+  setValue(value);
+};
